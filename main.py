@@ -1,10 +1,10 @@
-usr_input = input("Введите пароль: ") + "0"
+usr_input = input("Введите пароль: ") + "0"       #принимаем пользовательский ввод, если пароль пустой, переменная будет равна "0"
 
 try:
-    numeric_input = int(usr_input)
-    1 / numeric_input
-    print("Ваш пароль состоит только из цифр")
-except ValueError:
+    numeric_input = int(usr_input)                #проверяем состоит ли пароль не только из цифр
+    1 / numeric_input                             #проверяем пустой ли пароль
+    print("Ваш пароль состоит только из цифр")    #в противном случае пароль состоит только из цифр
+except ValueError:                                #если ValueError, значит пароль имеет символы отличные от цифр
     print("Требования к паролю соблюдены")
-except ZeroDivisionError:
+except ZeroDivisionError:                         #если ZeroDivisionError, значит пароль пустой (см. строчку 1)
     print("Вы ввели пустой пароль")
